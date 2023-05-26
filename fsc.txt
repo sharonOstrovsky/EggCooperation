@@ -1,0 +1,23 @@
+Algoritmo A2
+	Definir nombre Como Caracter
+	Escribir "Escribir Nombre de la persona que mas coopero"
+	Leer nombre
+	Escribir nombre, "es quien más colaboró en mi equipo, propiciando la cooperación y el fluir del conocimiento. Por estas razones, es que vamos a RECONOCERLO dándole un PULSO."
+FinAlgoritmo
+De Nicolas Garcia para todos 09:19 PM
+	Definir num1, num2 Como Real
+	
+	Escribir "Escribe dos numeros para realizar operaciones matematicas: "
+	Leer num1
+	Leer num2
+	
+	Escribir "Operaciones"
+	
+	Escribir "Suma: " num1+num2
+	Escribir "Resta: " num1-num2
+	Escribir "Muliplicacion: " num1*num2
+	Escribir "Division: " num1/num2
+	
+	
+FinAlgoritmo
+FinAlgoritmo

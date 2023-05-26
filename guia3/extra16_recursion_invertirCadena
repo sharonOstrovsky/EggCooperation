@@ -1,0 +1,20 @@
+Algoritmo sin_titulo
+//	Implemente de forma recursiva una función que le dé la vuelta a una cadena de caracteres.
+//NOTA: Si la cadena es un palíndromo, la cadena y su inversa coincidirán.
+	
+	Definir frase Como Caracter
+	leer frase
+	Escribir "su frase al reves es " invertirFrase(frase)
+FinAlgoritmo
+
+Funcion invertido <- invertirFrase(frase)
+	Definir invertido Como Caracter
+	Definir tam Como Entero
+	tam=Longitud(frase)-1
+	si tam<0 Entonces
+		invertido=""
+	SiNo
+		invertido=Concatenar(Subcadena(frase,tam,tam),invertirFrase(Subcadena(frase,0,tam-1)))
+	FinSi
+	
+FinFuncion

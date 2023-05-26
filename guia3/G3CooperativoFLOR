@@ -1,0 +1,44 @@
+Funcion calcular_columna_hormigon 
+	Definir  largo, cemento,arenayPiedra,hierro10,hierro4 Como Real
+	Escribir 'Ingresar el largo de la columna'
+	Leer largo 
+	cemento = 7.5 * largo
+	arenayPiedra = 0.016 * largo
+	hierro10 = 6 * largo 
+	hierro4 = 3 *largo
+	
+	Escribir 'Lista de materiales:'
+	Escribir 'Es necesario: ', cemento ' kg de cemento'
+	Escribir 'Es necesario: ', arenayPiedra ' m3 de arena'
+	Escribir 'Es necesario: ', arenayPiedra ' m2 de piedra'
+	Escribir 'Es necesario: ', hierro10 ' mts de hierro del 10'
+	Escribir 'Es necesario: ', hierro4 ' mts de hierro del 4'
+	Escribir '################################################'
+FinFuncion
+
+Funcion calcular_contrapiso
+	Definir espesor, ancho, largo, contrapiso ,cemento , arena, piedra Como Real
+	Escribir 'Ingrese espesor del contrapiso'
+	Leer espesor
+	Escribir 'Ingrese el largo del contrapiso'
+	Leer largo
+	Escribir 'Ingrese ancho del contrapiso'
+	Leer ancho
+	contrapiso = espesor * largo *ancho 
+	cemento = 105 *contrapiso
+	arena = 0.45 *contrapiso
+	piedra = 0.9 * contrapiso
+	
+	Escribir 'Lista de materiales:'
+	Escribir 'Es necesario: ', cemento ' kg de cemento'
+	Escribir 'Es necesario: ', arena ' m3 de arena'
+	Escribir 'Es necesario: ', piedra 'm2 de piedra'
+
+	
+FinFuncion
+
+Proceso principal
+	calcular_columna_hormigon
+	calcular_contrapiso
+	
+FinProceso

@@ -1,0 +1,99 @@
+Algoritmo sin_titulo
+	Definir tablero como Cadena
+	
+	Dimension tablero[9, 12]
+	inicializarMatriz(tablero)
+	agregarPalabra(tablero, "vector", 0)
+	agregarPalabra(tablero, "matrix", 1)
+	agregarPalabra(tablero, "programa", 2)
+	agregarPalabra(tablero, "subprograma", 3)
+	agregarPalabra(tablero, "subproceso", 4)
+	agregarPalabra(tablero, "variable", 5)
+	agregarPalabra(tablero, "entero", 6)
+	agregarPalabra(tablero, "para", 7)
+	agregarPalabra(tablero, "mientras", 8)
+	acomodarPalabras(tablero)
+	imprimirMatriz(tablero)
+FinAlgoritmo
+
+SubProceso inicializarMatriz(tablero)
+	Definir i, j Como Entero
+
+	para i<-0 Hasta 8 Hacer
+		para j<-0 Hasta 11 Hacer
+			tablero(i,j)="*"
+		FinPara
+	FinPara
+FinSubProceso
+
+SubProceso agregarPalabra(tablero por referencia, palabra, posicionI)
+	Definir i , esp Como Entero
+	para i<-0 Hasta 11 Hacer
+		si subcadena(palabra,i,i)<>"" Entonces
+			tablero(posicionI,i)=subcadena(palabra,i,i)  
+		sino 
+			tablero(posicionI,i)=" "
+		FinSi
+		
+	FinPara
+FinSubProceso
+
+SubProceso acomodarPalabras(tablero Por Referencia)
+	Definir i, aux, j, esp Como Entero
+	Definir frase Como Caracter
+	para i<-0 hasta 8 Hacer
+		si buscarR(tablero,i)<>5 Entonces
+			aux=4-buscarR(tablero,i)
+		frase=""
+		para esp<-0 Hasta aux Hacer
+			frase=frase+" "
+		FinPara
+		para j<-0 hasta 11 Hacer
+			frase=frase+tablero(i,j)
+		FinPara
+		para j<-0 hasta 11 Hacer
+			si Subcadena(frase,j,j)<>""
+				tablero(i,j)=Subcadena(frase,j,j)
+			sino 
+				tablero(i,j)=" "
+			FinSi
+			
+		FinPara
+	FinSi
+	FinPara
+	
+		
+	
+FinSubProceso
+
+Funcion posicion<- buscarR(tablero, i)
+	Definir j, r, posicion Como Entero
+	r=0
+	posicion=0
+
+
+		para j<-0 Hasta 11 Hacer
+			
+
+		si tablero(i,j)="r" y posicion=0  Entonces
+			posicion=j
+		FinSi
+
+	FinPara
+
+
+FinFuncion
+
+SubProceso imprimirMatriz(tablero)
+	Definir i, j Como Entero
+	para i<-0 Hasta 8 Hacer
+		para j<-0 Hasta 11 Hacer
+			Escribir "[" tablero(i,j) "]" Sin Saltar
+		FinPara
+		Escribir ""
+	FinPara
+FinSubProceso
+
+
+
+	
